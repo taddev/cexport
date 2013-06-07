@@ -14,13 +14,13 @@ This library is defined by two files. One holds the C code and exports a Go func
 The first file where we define the C function that prints a statement then calls a Go function. We also define a Go function for use by Go to perform the initial C call; `func Example()` is a wrapper function that allows us to call the C function from an external location.
 
 #### goexport.go ####
-This Go function is exported for use in C code. It must be defined in its own file to prevent a double definition error. This is new to Go 1.
+This Go function is exported for use in C code. It must be defined in its own file to prevent a double definition error. This is new to Go1.
 
 
 ## Using cexport Library ##
-Here is how the library is used. This program knows nothing about the C code but has complete access to it through the wrapper function `cexport.Example()` we created earlier.
+This example program knows nothing about the C code but has complete access to it through the wrapper function `cexport.Example()` we created earlier.
 
-To download this library for your own use do the following:
+To download this library for your own use do the following, assuming you have setup your Go working directory correctly.
 
 	go get github.com/taddevries/cexport
 
@@ -37,7 +37,8 @@ Then write the following program in a your own Go src directory.
 	}
 
 
-Output
+#### Output ####
+Run the program like any other Go program and you're pinning for the fjords......
 
 	> go run prog1.go
 	Hello, C!
