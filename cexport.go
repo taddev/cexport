@@ -1,16 +1,17 @@
 package cexport
 
+import "fmt"
+
 /*
 #include <stdio.h>
-
-extern void AGoFunction();
-
-void ACFunction() {
-    printf("Hello, C!\n");
-    AGoFunction();
-}
+extern void ACFunction();
 */
 import "C"
+
+//export AGoFunction
+func AGoFunction() {
+	fmt.Println("Hello, GO!")
+}
 
 func Example() {
 	C.ACFunction()
