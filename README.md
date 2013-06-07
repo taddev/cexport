@@ -49,7 +49,13 @@ This Go function is exported for use in C code. It must be defined in its own fi
 	}
 
 ### Using cexport Library ###
-Here is how the library is used. This program no nothing about the C code but has complete access to it through the wrapper function `cexport.Example()` we created earlier.
+Here is how the library is used. This program knows nothing about the C code but has complete access to it through the wrapper function `cexport.Example()` we created earlier.
+
+To download this library for your own use do the following:
+
+	go get github.com/taddevries/cexport
+
+Then write the following program in a your own Go src directory.
 
 #### prog1.go ####
 
