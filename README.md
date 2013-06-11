@@ -30,7 +30,7 @@ Then write the following program in a your own Go src directory.
     import "github.com/taddevries/cexport"
 
     func main() {
-        cexport.Example()
+        cexport.RunCGoC()
     }
 
 ### Output ###

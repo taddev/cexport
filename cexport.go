@@ -13,6 +13,6 @@ func AGoFunction() {
 	fmt.Println("Hello, GO!")
 }
 
-func RunCGOC() {
+func RunCGoC() {
 	C.ACFunction()
 }
