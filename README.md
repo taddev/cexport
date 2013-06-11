@@ -1,9 +1,7 @@
 # Exporting both C and Go Functions #
 
 ## Overview ##
-The first thing to note is that exported functions in Go must start with a capital letter. The other piece of note new to Go1 is that you can't export a Go function to C and use it in C in the same file. 
-
-Based on code examples from the [go-wiki][3].
+The purpose of this library is to help me understand how to build libraries in Go and how to export both Go functions and C functions. It is a very simple example Based on code examples from the [go-wiki][3]. Though the library is simple I believe it effectively demonstrates how to accomplish function exports.
 
 From [cgo documentation][1]
 
@@ -12,10 +10,10 @@ From [cgo documentation][1]
 My library is available on [Github.com][2].
 
 ## cexport Library ##
-This library is defined by two files. One holds the C code and exports a C function for Go use. The second file holds the Go code and exports a Go function for C use as well as a Go function for Go use (confused yet?). To use this library simply import it to a *main* package and call `cexport.Example()`. This will invoke the C function which prints a statement then calls the Go function from C. The method is overly complex but is used to show how these processes are handled.
+This library is defined by two files. One holds the C code and exports a C function for Go use. The second file holds the Go code and exports a Go function for C use as well as a Go function for Go use (confused yet?). To use this library simply import it to a *main* package and call `cexport.RunCGoC()`. This will invoke the C function which prints a statement then calls the Go function from C. The method is overly complex but is used to show how these processes are handled.
 
 ## Using cexport Library ##
-This example program knows nothing about the C code but has complete access to it through the wrapper function `cexport.Example()` we created earlier.
+This example program knows nothing about the C code but has complete access to it through the wrapper function `cexport.RunCGoC()` we created earlier.
 
 To download this library for your own use do the following, assuming you have setup your Go working directory correctly.
 
